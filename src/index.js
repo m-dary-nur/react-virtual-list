@@ -6,14 +6,25 @@ const useRefListener = () => {
    const [clientHeight, setClientHeight] = useState(0)
    const ref = useRef()
 
-   const onScroll = e => requestAnimationFrame(() => {
-      setScrollTop(e.target.scrollTop)
-   })
+   const onScroll = (e) => {
+      let isProcess = false      
+      if (isProcess) return
+      isProcess = true
+      requestAnimationFrame(() => {
+         setScrollTop(e.target.scrollTop)
+         isProcess = false         
+      })
+   }
 
-   const onResize = e => requestAnimationFrame(() => {
-      setClientHeight(e.target.document.body.clientHeight)
-   })
-
+   const onResize = (e) => {
+      let isProcess = false      
+      if (isProcess) return
+      isProcess = true      
+      requestAnimationFrame(() => {
+         setClientHeight(e.target.document.body.clientHeight)
+         isProcess = false         
+      })
+   }
 
    useEffect(() => {
       const scrollContainer = ref.current
