@@ -1,6 +1,6 @@
 {
   "name": "@m-dary-nur/react-virtual-list",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "lightweight and flexible react virtualized list with react hooks (support for react latest version)",
   "main": "./index.js",
   "scripts": {
