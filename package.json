@@ -1,6 +1,6 @@
 {
   "name": "@m-dary-nur/react-virtual-list",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "lightweight and flexible react virtualized list with react hooks (support for react latest version)",
   "main": "./lib/index.js",
   "scripts": {
@@ -50,6 +50,9 @@
   },
   "peerDependencies": {},
   "babel": {
-    "presets": ["@babel/preset-env","@babel/preset-react"]
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
   }
 }
