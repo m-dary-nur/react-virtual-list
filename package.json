@@ -2,10 +2,10 @@
   "name": "@m-dary-nur/react-virtual-list",
   "version": "0.2.0",
   "description": "lightweight and flexible react virtualized list with react hooks (support for react latest version)",
-  "main": "./index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "start": "webpack --watch",
-    "build": "webpack",
+    "build": "babel src --out-dir lib --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -31,19 +31,25 @@
   },
   "homepage": "https://github.com/m-dary-nur/react-virtual-list#readme",
   "dependencies": {
-    "react": "^16.13.1",
-    "webpack": "^4.43.0"
+    "babel-upgrade": "^1.0.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-react-jsx-self": "^7.9.0",
+    "@babel/plugin-transform-react-jsx-source": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/register": "^7.9.0",
     "babel-loader": "^8.1.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
+    "file-loader": "^6.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },
-  "peerDependencies": {
-    "react": "^16.13.1"
+  "peerDependencies": {},
+  "babel": {
+    "presets": ["@babel/preset-env","@babel/preset-react"]
   }
 }
