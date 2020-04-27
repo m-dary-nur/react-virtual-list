@@ -1,8 +1,6 @@
 # react-virtual-list
 lightweight and flexible React Virtualized-listist Component Wrapper (support for React v16.8 ~ v16.13.1).
 
-[See the demo here](http://m-dary-nur.github.io/react-virtual-list)
-
 `react-virtual-list` help you virtualizing list for better performance and memory.
 
 ### Benefits:
@@ -84,5 +82,5 @@ Name | Type | Default | Description
 
 #### Example Usage
 
-coming soon. :)
+[Coming soon but will be here](http://m-dary-nur.github.io/react-virtual-list)
 
