@@ -1,6 +1,6 @@
 {
   "name": "@m-dary-nur/react-virtual-list",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "lightweight and flexible react virtualized list with react hooks (support for react latest version)",
   "main": "./lib/index.js",
   "scripts": {
@@ -30,9 +30,7 @@
     "url": "https://github.com/m-dary-nur/react-virtual-list/issues"
   },
   "homepage": "https://github.com/m-dary-nur/react-virtual-list#readme",
-  "dependencies": {
-    "babel-upgrade": "^1.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
