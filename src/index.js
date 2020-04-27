@@ -46,7 +46,7 @@ const VirtuList = ({ items, ...props }) => {
    return (
       <div className="react-virtuallist" style={{ height, width, overflow: "auto" }} ref={ref}>
          <div style={{ height: totalHeight, paddingTop: offsetY }}>
-            {children({ indexStart: startItem, items: visibleItems, ...props })}
+            {children({ indexStart: startItem, itemStyle: {height: itemHeight}, items: visibleItems, ...props })}
          </div>
       </div>
    )
