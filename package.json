@@ -1,0 +1,49 @@
+{
+  "name": "@m-dary-nur/react-virtual-list",
+  "version": "0.1.0",
+  "description": "lightweight and flexible react virtualized list with react hooks (support for react latest version)",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-dary-nur/react-virtual-list.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-component",
+    "virtual",
+    "virtualized",
+    "list",
+    "scroll",
+    "scrolling",
+    "infinite",
+    "flexible"
+  ],
+  "author": "Muhammad Dary Nur Rabbani <m.dary.nur@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m-dary-nur/react-virtual-list/issues"
+  },
+  "homepage": "https://github.com/m-dary-nur/react-virtual-list#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "webpack": "^4.43.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1"
+  }
+}
