@@ -1,12 +1,19 @@
-import React, { memo, useMemo, useState, useEffect, useRef } from "react"
+import React, { memo, useMemo, useState, useEffect, useRef, MutableRefObject } from "react"
 
 
-const useRefListener = () => {
+interface IScrollContainer {
+   scrollTop: number
+   clientHeight: number
+   addEventListener: any
+   removeEventListener: any
+}
+
+const useRefListener = (): any => {
    const [scrollTop, setScrollTop] = useState(0)
    const [clientHeight, setClientHeight] = useState(0)
    const ref = useRef()
 
-   const onScroll = (e) => {
+   const onScroll = (e: any) => {
       let isProcess = false      
       if (isProcess) return
       isProcess = true
@@ -16,7 +23,7 @@ const useRefListener = () => {
       })
    }
 
-   const onResize = (e) => {
+   const onResize = (e: any) => {
       let isProcess = false      
       if (isProcess) return
       isProcess = true      
@@ -27,11 +34,14 @@ const useRefListener = () => {
    }
 
    useEffect(() => {
-      const scrollContainer = ref.current
-      setScrollTop(scrollContainer.scrollTop)
-      setClientHeight(scrollContainer.clientHeight)
-      scrollContainer.addEventListener("scroll", onScroll)
-      window.addEventListener("resize", onResize)
+      const scrollRef: MutableRefObject<any> = ref
+      const scrollContainer: IScrollContainer = scrollRef.current
+      if (scrollContainer) {
+         setScrollTop(scrollContainer.scrollTop)
+         setClientHeight(scrollContainer.clientHeight)
+         scrollContainer.addEventListener("scroll", onScroll)
+         window.addEventListener("resize", onResize)
+      }
       return () => {
          scrollContainer.removeEventListener("scroll", onScroll)
          window.removeEventListener("resize", onResize)
@@ -42,7 +52,7 @@ const useRefListener = () => {
 }
 
 
-const VirtuList = ({ items, ...props }) => {
+const VirtuList = ({ items, ...props }: any) => {
    const { children, height = "100%", width = "100%", itemHeight = 50, itemBuffer = 2 } = props
    const [scrollTop, ref, clientHeight] = useRefListener()
    const totalHeight = items.length * itemHeight
