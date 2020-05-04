@@ -5,7 +5,7 @@ lightweight and flexible React Virtualized-listist Component Wrapper (support fo
 
 ### Benefits:
 * Zero dependency (no dependencies needed)
-* Very small library [ 1.8kB minified + gzipped !](https://bundlephobia.com/result?p=@m-dary-nur/react-virtual-list)
+* Very small library [ less than 1 kB (989 Bytes) minified + gzipped !](https://bundlephobia.com/result?p=@m-dary-nur/react-virtual-list)
 * Keep your components as a higher-order component
 * Very flexible - `react-virtual-list` just wrapped your map components and it will helps your component manage virtualizing your map list.
 
