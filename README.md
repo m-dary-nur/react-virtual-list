@@ -74,7 +74,7 @@ properties are used for setup `react-virtual-list`.
 
 Name | Type | Default | Description
 --- | --- | --- | ---
-`wrappperClass` | string | "" | className props for wrapper.
+`wrappperClassName` | string | "" | className props for wrapper.
 `items` | Array | - | Array of your list items.
 `itemHeight` | Number | 50 | (optional) Height in pixels for each row item. if not set it will set as 50 pixel height as default.
 `itemBuffer` | Number | 2 | () Number of row that should be rendered before and after the visible view.
